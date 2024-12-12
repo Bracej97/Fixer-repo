@@ -4,7 +4,21 @@
   padding: 2rem;
   text-align: center;
 }
-
+.sidebar{
+  list-style: none;
+  position: fixed;
+  margin:0;
+  padding:0;
+  height:100%;
+  top:0px;
+  left: 10px;
+  font-size: 20px;
+  background-color: #888;
+  color: black
+}
+.nav-link{
+  border: solid, black, 1px;
+}
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -33,10 +47,22 @@
   }
 }
 
-.card {
+.read-the-docs {
+  color: #888;
+}
+
+
+.card-holder{
+  display: flex;
+  flex-wrap: wrap;
+}
+.card{
+  border: black, solid;
+  border-radius: 25px;
+  margin:25px;
   padding: 2em;
 }
 
-.read-the-docs {
-  color: #888;
+.card:hover{
+  box-shadow: 10px 10px;
 }

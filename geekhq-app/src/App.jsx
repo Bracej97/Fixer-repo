@@ -11,23 +11,21 @@ import Error from './pages/error'
 function App() {
   return (
     <>
-    <h1>
-      Hello
-    </h1>
+
     <Router>
       <div>
         <nav>
-          <ul>
-            <li>
+          <ul className="sidebar">
+            <li className="nav-link">
               <Link to='/'>Home</Link>
             </li>
-            <li>
+            <li className="nav-link">
               <Link to='/faq'>FAQ</Link>
             </li>
-            <li>
+            <li className="nav-link">
               <Link to='/profile'>Profile</Link>
             </li>
-            <li>
+            <li className="nav-link">
               <Link to='/events'>Events</Link>
             </li>
           </ul>
