@@ -10,22 +10,27 @@ import data from '../mock/user-mock.json';
     // set name hook to name in json data 
 
 function Home(){
-    
-    const [name, setName] = useState('')
-    const handleInputChange = (event) => {
-        for(let i = 0; i < data.length; i++) {
-            console.log(data[i])
-        }
-    }
+    const [name, setName] = useState('');
 
+    const [searchQuery, setSearchQuery] = useState('');
+    const [filteredResults, setFilteredResults] = useState([])
+    const handleInputChange = (e) => {
+        const query = e.target.value.toLowerCase();
+        setId(query);
+
+    const results = data.filter((item) =>
+        item.name.toLowerCase().includes(query)
+    );
+    setFilteredResults(results);
+}
 
     return (
         <div>
-            <input type="text" className='input' value="input-value" onChange={handleInputChange}></input>
+            <input type="text" className='input' id="id" onKeyDown={handleInputChange}></input>
             <div className="card-holder">
                 <div className="card">
                     <h2>
-                        Hello {name}
+                        Hello {item.name}
                     </h2>
                 </div>
                 <div className="card">
