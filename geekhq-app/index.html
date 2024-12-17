@@ -11,3 +11,17 @@
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
+<div id="events-page">
+  <h1>Events</h1>
+  <div class="filter">
+      <label for="category-filter">Filter by Category:</label>
+      <select id="category-filter">
+          <option value="all">All</option>
+          <option value="academic">Academic</option>
+          <option value="social">Social</option>
+          <option value="sports">Sports</option>
+      </select>
+  </div>
+  <div id="events-container"></div>
+</div>
+<script type="module" src="./src/events/EventsPage.js"></script>
